@@ -11,5 +11,9 @@ interface Todo {
 axios.get(url).then((res) => {
   const todo = res.data as Todo;
   const { id, title, completed } = todo;
-  console.log(id, title, completed);
+  logTodo(id, title, completed);
 });
+
+const logTodo = (id: number, title: string, completed: boolean) => {
+  console.log(id, title, completed);
+};
