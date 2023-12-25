@@ -33,6 +33,27 @@ logNumber(1);
 
 // Any Type
 
+//Case 1
 const json = '{"x":10,"y":20}';
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(json);
+
+//Case 2
+let words = ["blue", "green", "yellow"];
+let foundWord: boolean;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === "green") {
+    foundWord = true;
+  }
+}
+
+//Case 3
+let numbers = [-10, 5, -15];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
+  }
+}
