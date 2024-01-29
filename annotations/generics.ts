@@ -53,3 +53,28 @@ printAnything<number>([1, 2, 3, 4]);
 // Type Inference
 printAnything(["a", "b"]);
 printAnything([1, 2, 3, 4]);
+
+// Generic Constraints
+
+class Car {
+  print() {
+    console.log("Hi i am a car");
+  }
+}
+
+class House {
+  print() {
+    console.log("Hi i am a House");
+  }
+}
+
+interface Printable {
+    print():void
+}
+
+const printHousesOrCars =<T extends Printable>  (arr:T[]):void => { 
+    for(let i=0;i<arr.length;i++){
+        arr[i].print()
+    }
+ }
+printHousesOrCars([1,2,3])
