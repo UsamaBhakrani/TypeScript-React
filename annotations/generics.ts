@@ -77,4 +77,4 @@ const printHousesOrCars =<T extends Printable>  (arr:T[]):void => {
         arr[i].print()
     }
  }
-printHousesOrCars([1,2,3])
+printHousesOrCars([new House])
